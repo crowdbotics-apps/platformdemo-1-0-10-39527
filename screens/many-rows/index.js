@@ -1,9 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useEffect } from "react";
 import { FlatList, Text, View, StyleSheet } from "react-native";
 
 const Row = ({
   item
 }) => {
+  const navigation = useNavigation();
   return <View style={styles.row}>
         <View style={styles.rowContent}>
           <Text style={styles.textHeading1}>{item.name}</Text>
@@ -12,7 +15,9 @@ const Row = ({
           <Text style={styles.textHeading4}>Heading 4</Text>
           <Text style={styles.textDescription}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</Text>
         </View>
-      </View>;
+      <Pressable onPress={() => {
+      navigation.navigate("eventDetails", {});
+    }}><Text style={styles.LywwyRTd}>Go To Details</Text></Pressable></View>;
 };
 
 const ManyRows = () => {
@@ -75,6 +80,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "400",
     color: "#333"
+  },
+  LywwyRTd: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ManyRows;
