@@ -20,7 +20,10 @@ const Row = ({
     }}><Text style={styles.LywwyRTd}>Go To Details</Text></Pressable></View>;
 };
 
-const ManyRows = () => {
+const ManyRows = ({
+  route
+}) => {
+  const {} = route.params || {};
   const [data, setData] = React.useState();
   useEffect(() => {
     setData([{
