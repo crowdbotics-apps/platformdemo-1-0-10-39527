@@ -5,17 +5,17 @@ import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 const Untitled1 = () => {
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><View style={styles.gPJJRprh}><Text style={styles.LaXfSBAb}>Lorem ipsum…</Text></View></ScrollView>
+    }} style={styles.OEUtgBAb}><View style={styles.gPJJRprh}><Text style={styles.LaXfSBAb}>Lorem ipsum…</Text></View></ScrollView>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%'
+    height: '100%',
+    backgroundColor: "#ffffff"
   },
   gPJJRprh: {
     height: 60,
@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
     lineHeight: 14,
     fontSize: 14,
     borderRadius: 0
+  },
+  OEUtgBAb: {
+    backgroundColor: "#ff0000",
+    opacity: 1
   }
 });
 export default Untitled1;
