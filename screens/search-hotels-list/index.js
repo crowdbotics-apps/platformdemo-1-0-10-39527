@@ -59,7 +59,7 @@ const SearchHotelsList = () => {
             <Text style={styles.subHeading}>Explore perfect places</Text>
           </View>} data={hotels} renderItem={({
       item
-    }) => <View>
+    }) => <Pressable onPress={{}}><View>
             <Image source={item.image} style={styles.hotelImage} />
             <Pressable onPress={() => handleFavourite(item)} style={styles.heartIconContainer}>
               <Image source={favourites.includes(item) ? require("./assets/isFavIcon.png") : require("./assets/favIcon.png")} style={styles.heartIcon} />
@@ -81,7 +81,7 @@ const SearchHotelsList = () => {
                 </Text>
               </View>
             </View>
-          </View>} keyExtractor={item => item.id.toString()} />
+          </View></Pressable>} keyExtractor={item => item.id.toString()} />
       <Footer titles={["Explore", "Saved", "Trip", "Inbox", "Profile"]} images={[require("./assets/homeIcon.png"), require("./assets/savedIconActive.png"), require("./assets/tripIcon.png"), require("./assets/inboxIcon.png"), require("./assets/userIcon.png")]} active={1} />
     </View>;
 };

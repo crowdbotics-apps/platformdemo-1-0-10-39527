@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { Text } from "react-native";
 import { View } from "react-native";
 import { ImageBackground } from "react-native";
@@ -5,6 +7,7 @@ import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled1 = ({}) => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={{
       backgroundColor: '#1B1A20',
@@ -15,9 +18,11 @@ const Untitled1 = ({}) => {
         <ImageBackground style={styles.BAuRCnCj} source={require("./Screenshot.png")} resizeMode="cover"></ImageBackground>
         <ImageBackground style={styles.eziaingY} source={require("./5cc08480f9312f082b3bc204_brand-line.png")} resizeMode="cover"></ImageBackground>
         
-          <View style={styles.VngTxYqJ}>
+          <Pressable onPress={() => {
+        navigation.navigate("searchHotelsList");
+      }}><View style={styles.VngTxYqJ}>
             <Text style={styles.OLGmBJlN}>Lets Go</Text>
-          </View>
+          </View></Pressable>
         
       </ScrollView>
     </SafeAreaView>;
