@@ -1,39 +1,78 @@
 import { Text } from "react-native";
+import { View } from "react-native";
+import { ImageBackground } from "react-native";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled1 = () => {
+const Untitled1 = ({}) => {
   return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
+      <ScrollView contentContainerStyle={{
+      backgroundColor: '#1B1A20',
       padding: 10,
       position: 'relative',
       flex: 1
-    }} style={styles.OEUtgBAb}><View style={styles.gPJJRprh}><Text style={styles.LaXfSBAb}>Lorem ipsum…</Text></View></ScrollView>
+    }}>
+        <ImageBackground style={styles.BAuRCnCj} source={require("./Screenshot.png")} resizeMode="cover"></ImageBackground>
+        <ImageBackground style={styles.eziaingY} source={require("./5cc08480f9312f082b3bc204_brand-line.png")} resizeMode="cover"></ImageBackground>
+        
+          <View style={styles.VngTxYqJ}>
+            <Text style={styles.OLGmBJlN}>Lets Go</Text>
+          </View>
+        
+      </ScrollView>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%',
-    backgroundColor: "#ffffff"
+    height: '100%'
   },
-  gPJJRprh: {
-    height: 60,
+  IuZHwZrj: {
+    width: 347,
+    height: 617,
+    alignItems: "stretch",
+    justifyContent: "flex-start"
+  },
+  BAuRCnCj: {
+    width: '100%',
+    height: 294,
+    position: "absolute",
+    bottom: 0,
+    left: 5
+  },
+  eziaingY: {
+    width: 223,
+    height: 30,
+    position: "absolute",
+    top: 50,
+    alignSelf: "center"
+  },
+  VngTxYqJa: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-around"
+  },
+  VngTxYqJ: {
+    height: 48,
     width: 140,
-    backgroundColor: "#E4E4E4",
+    backgroundColor: "#04c2ab",
+    borderRadius: 10,
+    color: "#777777",
+    position: "absolute",
+    left: 108.5,
+    top: 294.5
+  },
+  OLGmBJlN: {
+    width: 138,
+    height: 40,
+    lineHeight: 34,
+    fontSize: 20,
     borderRadius: 0,
-    color: "#777777"
-  },
-  LaXfSBAb: {
-    width: 100,
-    height: 50,
-    lineHeight: 14,
-    fontSize: 14,
-    borderRadius: 0
-  },
-  OEUtgBAb: {
-    backgroundColor: "#ff0000",
-    opacity: 1
+    position: "absolute",
+    top: 5,
+    left: 1,
+    textAlign: "center",
+    fontWeight: "700"
   }
 });
 export default Untitled1;
